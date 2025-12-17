@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+            background: linear-gradient(to bottom, #1a0b2e 0%, #1a0b2e 30%, #6b1d8f 30%, #6b1d8f 100%);
+            font-family: 'Press Start 2P', cursive;
+        }
+.pixel-text {
+            font-family: 'Press Start 2P', cursive;
+        }

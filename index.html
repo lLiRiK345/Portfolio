@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lLiRik - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-purple': '#1a0b2e',
+                        'mid-purple': '#3d1f5c',
+                        'bright-purple': '#6b1d8f',
+                        'neon-pink': '#e91e8c',
+                        'hot-pink': '#ff1493'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-[#CF23AF]">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#260039] bg-opacity-95 p-4 ">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="pixel-text text-[#CF23AF] text-xl tracking-wider">lLiRik</div>
+            <div class="flex gap-2 md:gap-4 text-center tracking-wider">
+                <a href="#hero" class="w-48 h-10 border-2 border-[#CF23AF] px-3 py-2 hover:bg-[#CF23AF] hover:text-[#260039]">Главная</a>
+                <a href="#about" class="w-48 h-10 border-2 border-[#CF23AF] px-3 py-2 md:px-4 md:py-2 hover:bg-[#CF23AF] hover:text-[#260039] ">Обо мне</a>
+                <a href="#skills" class="w-48 h-10 border-2 border-[#CF23AF] px-3 py-2 md:px-4 md:py-2 hover:bg-[#CF23AF] hover:text-[#260039] ">Навыки</a>
+                <a href="#portfolio" class="w-48 h-10 border-2 border-[#CF23AF] px-3 py-2 md:px-4 md:py-2 hover:bg-[#CF23AF] hover:text-[#260039] ">Портфолио</a>
+                <a href="#contacts" class="w-48 h-10 border-2 border-[#CF23AF] px-3 py-2 md:px-4 md:py-2 hover:bg-[#CF23AF] hover:text-[#260039] ">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center pt-20 text-[#CF23AF]">
+        <h1 class="pixel-text text-4xl md:text-6xl lg:text-8xl mb-8 tracking-wider">PORTFOLIO</h1>
+        <p class="pixel-text pt-40">Emelyanov Kirill</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class=" py-10 bg-[#4E007A]">
+        <div class="container mx-auto px-4">
+            <h2 class="pixel-text text-3xl md:text-4xl text-[#CF23AF] text-center mb-12">Обо мне</h2>
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
+                <!-- Photo with pixelated background -->
+                <div class="relative">
+                    <div class="w-64 h-80 md:w-80 md:h-96 relative overflow-hidden pixel-border">
+                        <img src="photo.png" alt="Profile" class="relative z-10 w-full h-full object-cover object-center">
+                    </div>
+                </div>
+                
+                <!-- About Text -->
+                <div class="flex flex-col items-center border-4 border-[#CF23AF] p-6 md:p-8 bg-[#260039]">
+                    <p class="pixel-text text-[#CF23AF] leading-relaxed mb-6">
+                        Меня зовут Кирилл. На данный момент обучаюсь в РГПУ им.Герцена и являюсь студентом 3 курса по направлению "Информационные технологии в дизайне" в котором углубленно изучаю как дизайнерские дисциплины, так и основы программирования. 
+Больше всего меня интересует 3D моделирование. Имею опыт работы в Unity а сейчас активно изучаю Maxon Cinema 4D. Также имею познания во Фронтенде и владею несколькими языками программирования.
+                    </p>
+                    <a href="#contacts" class="text-[#260039] px-6 py-3 " style="background:no-repeat url('Rectangle 3.png'); background-size: 100% 100%;">
+                        Написать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="min-h-screen py-10 bg-[#320057]">
+        <h2 class="pixel-text text-3xl md:text-4xl text-[#CF23AF] text-center mb-12">Навыки</h2>
+        <div class=" bg-[#260039] relative mx-40 py-10">            
+            <!-- Tabs -->
+            <div class="flex justify-center gap-4 mb-12 flex-wrap">
+                <button class="w-80 h-20 border-4 border-[#CF23AF] tab-button neon-border px-6 py-3  hover:bg-[#CF23AF] hover:text-[#260039]" onclick="showTab('programming')">
+                    Программирование
+                </button>
+                <button class="w-80 h-20 border-4 border-[#CF23AF] tab-button neon-border px-6 py-3  hover:bg-[#CF23AF] hover:text-[#260039]" onclick="showTab('modeling')">
+                    Моделирование
+                </button>
+                <button class="w-80 h-20 border-4 border-[#CF23AF] tab-button neon-border px-6 py-3  hover:bg-[#CF23AF] hover:text-[#260039]" onclick="showTab('other')">
+                    Прочее
+                </button>
+                <!-- Skills Icons -->
+            </div>
+            <div>
+                <div id="programming" class="skills-content flex flex-wrap justify-center gap-x-60 gap-y-36 max-w-4xl mx-auto">
+                <!-- HTML5 -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="HTML.png" alt="">
+                    </div>
+                
+                <!-- CSS3 -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="CSS.png" alt="">
+                    </div>
+                
+                <!-- JavaScript -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="JavaScript.png" alt="">
+                    </div>
+                
+                <!-- Design Tool 1 -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="Python.png" alt="">
+                    </div>
+                
+                <!-- Design Tool 2 -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="C++.png" alt="">
+                    </div>
+                </div>
+            
+                <div id="modeling" class="skills-content hidden flex-wrap justify-center gap-x-60 my-40 max-w-4xl mx-auto">
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="Unity.png" alt="">
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="Maxon Cinema 4D.png" alt="">
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="Kompas.png" alt="">
+                    </div>
+                </div>
+                 <div id="other" class="skills-content hidden flex-wrap justify-center gap-x-60 my-40 max-w-4xl mx-auto">
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="Figma.png" alt="">
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="Photoshop.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
+    <!-- Replaced slider with grid layout of 3 clickable images -->
+    <section id="portfolio" class=" py-10 bg-[#4E007A]">
+        <div class="container mx-auto px-4">
+            <h2 class="pixel-text text-3xl md:text-4xl text-[#CF23AF] text-center mb-12">Портфолио</h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Portfolio Grid with 3 images -->
+                <div class="bg-[#260039] p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Image 1 -->
+                        <div class="p-2">
+                            <img src="Dom.png" 
+                                 alt="3D Building Model" 
+                                 class="portfolio-image w-full h-auto">
+                        </div>
+                        
+                        <!-- Image 2 -->
+                        <div class="p-2">
+                            <img src="Lampa.png" 
+                                 alt="3D Lamp Model" 
+                                 class="portfolio-image w-full h-auto">
+                        </div>
+                        
+                        <!-- Image 3 -->
+                        <div class="p-2">
+                            <img src="Monitor.png" 
+                                 alt="3D Monitor Model" 
+                                 class="portfolio-image w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-10 bg-[#260039] flex flex-col items-center justify-center">
+        <h2 class="pixel-text text-3xl md:text-4xl text-[#CF23AF] text-center mb-12">Контакты</h2>
+        
+        <div class="flex gap-8 md:gap-40">
+            <!-- Tg -->
+            <img src="dinkie-icons_telegram.png" class="w-16 h-16" alt="" style="cursor: pointer;">
+            
+            <!-- VK -->
+            <img src="VK.png" class="w-16 h-16" alt="" style="cursor: pointer;">
+            
+            <!-- Gmail -->
+            <img src="Rectangle 558.png" class="w-18 h-16" alt="" style="cursor: pointer;">
+        </div>
+    </section>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.skills-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active-tab');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.remove('hidden');
+            document.getElementById(tabName).classList.add('flex');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active-tab');
+        }
+        
+        // Smooth scroll for navigation
+        
+    </script>
+</body>
+</html>
